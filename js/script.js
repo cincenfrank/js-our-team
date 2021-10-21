@@ -103,19 +103,21 @@ function initializeTeamList(teamList) {
  * @returns {HTMLDivElement}
  */
 function createTeamCard(name, role, image) {
+  // Team card
   const teamCard = document.createElement("div");
   teamCard.classList.add("team-card");
+
+  // Card Image
   const cardImage = document.createElement("div");
   cardImage.classList.add("card-image");
   const img = document.createElement("img");
   img.src = "img/" + image;
   img.alt = name;
-
   cardImage.appendChild(img);
 
+  // Card Text
   const cardText = document.createElement("div");
   cardText.classList.add("card-text");
-
   const nameElement = document.createElement("h3");
   nameElement.textContent = name;
   const roleElement = document.createElement("p");
@@ -124,6 +126,7 @@ function createTeamCard(name, role, image) {
   cardText.appendChild(nameElement);
   cardText.appendChild(roleElement);
 
+  // Append card image and card text to team card
   teamCard.appendChild(cardImage);
   teamCard.appendChild(cardText);
 
